@@ -1,9 +1,9 @@
-unit BinkyBoink;
+unit BinkyBoinkUnit;
 
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, BinkyBoinkClassesUnit, BinkyBoinkRPCUnit;
 
 implementation
 
