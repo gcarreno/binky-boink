@@ -1,6 +1,7 @@
 program binkyboink;
 
 {$mode objfpc}{$H+}
+{$I blinkyboink.inc}
 
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}

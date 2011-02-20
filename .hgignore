@@ -3,6 +3,7 @@ syntax: glob
 autom4te.cache
 backup
 fpmake
+gui/lib
 gui/binkyboink
 Units
 configure

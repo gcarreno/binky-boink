@@ -4,5 +4,56 @@ object frmMain: TfrmMain
   Top = 273
   Width = 718
   Caption = 'Binky-Boink'
+  ClientHeight = 550
+  ClientWidth = 718
   LCLVersion = '0.9.29'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 510
+    Top = 0
+    Width = 718
+    Align = alClient
+    Caption = ' Log Messages '
+    ClientHeight = 492
+    ClientWidth = 716
+    TabOrder = 0
+    object memLog: TMemo
+      Left = 0
+      Height = 492
+      Top = 0
+      Width = 716
+      Align = alClient
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
+  end
+  object panButtons: TPanel
+    Left = 0
+    Height = 40
+    Top = 510
+    Width = 718
+    Align = alBottom
+    ClientHeight = 40
+    ClientWidth = 718
+    TabOrder = 1
+    object btnTest: TButton
+      Left = 10
+      Height = 25
+      Top = 5
+      Width = 75
+      Action = actTest
+      TabOrder = 0
+    end
+  end
+  object actlMain: TActionList
+    left = 300
+    top = 77
+    object actTest: TAction
+      Category = 'Test'
+      Caption = '&Test'
+      OnExecute = actTestExecute
+      ShortCut = 16468
+    end
+  end
 end
