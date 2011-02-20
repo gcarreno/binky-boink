@@ -1,0 +1,8 @@
+object frmMain: TfrmMain
+  Left = 486
+  Height = 550
+  Top = 273
+  Width = 718
+  Caption = 'Binky-Boink'
+  LCLVersion = '0.9.29'
+end
