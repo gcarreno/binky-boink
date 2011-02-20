@@ -8,6 +8,8 @@ Units
 configure
 Makefile
 fpc-res.res
+srcfiles.txt
+guifiles.txt
 *.exe
 *.compiled
 *.o

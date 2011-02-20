@@ -1,22 +1,44 @@
 #!/bin/bash
 PWD=`pwd`
-SOURCE="$PWD/src/*.pas"
 LIB="$PWD/lib"
 DEST="$PWD/docs"
 TITLE="Binky Boink"
 DESC="Lib and visualizer for BOINC Client"
 
+echo "$PWD/src/*.pas" > "$PWD/srcfiles.txt"
 
 pasdoc -D FPC -D LINUX -D UNIX \
    -I "$LIB"\
+   -I "."\
    -T "$TITLE"\
    -N "$DESC"\
    -O html\
    -E "$DEST"\
    -L en\
+   -S srcfiles.txt\
    --staronly\
    --write-uses-list\
    --link-look=full\
    --use-tipue-search\
    --auto-link\
-   "$SOURCE"
+
+DEST="$PWD/gui/docs"
+DESC="Visualizer for BOINC stats"
+
+echo "$PWD/gui/*.lpr" >  "$PWD/guifiles.txt"
+echo "$PWD/gui/*.pas" >> "$PWD/guifiles.txt"
+
+pasdoc -D FPC -D LINUX -D UNIX \
+   -I "$LIB"\
+   -I "."\
+   -T "$TITLE"\
+   -N "$DESC"\
+   -O html\
+   -E "$DEST"\
+   -L en\
+   -S guifiles.txt\
+   --staronly\
+   --write-uses-list\
+   --link-look=full\
+   --use-tipue-search\
+   --auto-link\
