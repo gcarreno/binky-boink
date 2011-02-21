@@ -16,13 +16,10 @@ type
   TBinkyBoinkGUIResult  = class;
 
 {**
-  TBinkyBoinkRPC
+  Object.TBinkyBoinkRPC
 
   RPC Helper object
 }
-
-  { TBinkyBoinkRPC }
-
   TBinkyBoinkRPC = class
   private
     FHost,
@@ -44,13 +41,10 @@ type
   end;
 
 {**
-  TBinkyBoinkGUIRequest
+  Object.TBinkyBoinkGUIRequest
 
   RPC Request Object
 }
-
-  { TBinkyBoinkGUIRequest }
-
   TBinkyBoinkGUIRequest = class
   private
     FContent: String;
@@ -62,13 +56,10 @@ type
   end;
 
 {**
-  TBinkyBoinkGUIResult
+  Object.TBinkyBoinkGUIResult
 
   RPC Result Object
 }
-
-  { TBinkyBoinkGUIResult }
-
   TBinkyBoinkGUIResult = class
   private
     FContent: String;
@@ -84,8 +75,11 @@ implementation
 const
   RPCWrapper = '<boinc_gui_rpc_request>'#13'%s</boinc_gui_rpc_request>'#13#3;
 
-{ TBinkyBoinkRPC }
+{**
+  Object.TBinkyBoinkRPC.Create
 
+  RPC helper object creator
+}
 constructor TBinkyBoinkRPC.Create;
 begin
   inherited Create;
@@ -96,6 +90,11 @@ begin
   FSockect:= TTCPBlockSocket.Create;
 end;
 
+{**
+  Object.TBinkyBoinkRPC.Destroy
+
+  RPC helper object destructor
+}
 destructor TBinkyBoinkRPC.Destroy;
 begin
   FreeAndNil(FRequest);
@@ -104,6 +103,11 @@ begin
   inherited Destroy;
 end;
 
+{**
+  Object.TBinkyBoinkRPC.Get
+
+  RPC Call with content
+}
 function TBinkyBoinkRPC.Get(aContent: String): String;
 var
   OneByte: Byte;
@@ -125,14 +129,22 @@ begin
   end;
 end;
 
-{ TBinkyBoinkGUIRequest }
+{**
+  Object.TBinkyBoinkGUIRequest.Create
+
+  RPC Request helper object constructor
+}
 
 constructor TBinkyBoinkGUIRequest.Create;
 begin
   FContent:= '';
 end;
 
-{ TBinkyBoinkGUIResult }
+{**
+  Object.TBinkyBoinkGUIResult.Create
+
+  RPC Result helper object constructor
+}
 
 constructor TBinkyBoinkGUIResult.Create;
 begin

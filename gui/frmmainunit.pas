@@ -48,8 +48,8 @@ end;
 
 procedure TfrmMain.actTestExecute(Sender: TObject);
 var
-  RPC: TBinkyBoinkRPC;
-  RPCResult: String;
+  Computer: TBinkyBoinkComputer;
+  Index: Integer;
 begin
   if Sender is TAction then
   begin
@@ -57,11 +57,36 @@ begin
     Application.ProcessMessages;
   end;
 
-  RPC:= TBinkyBoinkRPC.Create;
-  Log('Sending: '#13#10'Auth 1.');
-  RPCResult:= RPC.Get('<auth1/>');
-  Log('Got:'#13#10 + RPC.Result.Content);
-  FreeAndNil(RPC);
+  FBinkyBoink:= TBinkyBoink.Create;
+
+  Log('Adding BatchAMD(localhost).');
+  Computer:= TBinkyBoinkComputer.Create;
+  Computer.Name:= 'BatchAMD';
+  Computer.Host:= 'localhost';
+  FBinkyBoink.Computers.Add(Computer);
+
+  Log('Adding BatchManor(10.0.0.104).');
+  Computer:= TBinkyBoinkComputer.Create;
+  Computer.Name:= 'BatchManor';
+  Computer.Host:= '10.0.0.104';
+  FBinkyBoink.Computers.Add(Computer);
+
+  Log('Adding BatchServer(10.0.0.254).');
+  Computer:= TBinkyBoinkComputer.Create;
+  Computer.Name:= 'BatchServer';
+  Computer.Host:= '10.0.0.254';
+  FBinkyBoink.Computers.Add(Computer);
+
+  Log('Computers returned:');
+  for Index:= 0 to 3-1 do
+  begin
+    Log(Format('Computer: %s(%s:%s)',
+               [FBinkyBoink.Computers[Index].Name,
+               FBinkyBoink.Computers[Index].Host,
+               FBinkyBoink.Computers[Index].Port]));
+  end;
+
+  FreeAndNil(FBinkyBoink);
 
   if Sender is TAction then
   begin

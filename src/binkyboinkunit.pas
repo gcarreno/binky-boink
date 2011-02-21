@@ -17,9 +17,6 @@ type
 
   Main object of the Binky Boink lib.
 }
-
-  { TBinkyBoink }
-
   TBinkyBoink = class
   private
     FRPC: TBinkyBoinkRPC;
@@ -29,13 +26,16 @@ type
     constructor Create;
     destructor Destroy; override;
   published
-
+    property Computers: TBinkyBoinkComputers read FComputers;
   end;
 
 implementation
 
-{ TBinkyBoink }
+{**
+  Object.TBinkyBoink.Create
 
+  Main Binky Boink Object Creator
+}
 constructor TBinkyBoink.Create;
 begin
   inherited Create;
@@ -43,6 +43,11 @@ begin
   FComputers:= TBinkyBoinkComputers.Create;
 end;
 
+{**
+  Object.TBinkyBoink.Destroy
+
+  Main Binky Boink Object Destructor
+}
 destructor TBinkyBoink.Destroy;
 begin
   FreeAndNil(FComputers);
