@@ -42,3 +42,5 @@ pasdoc -D FPC -D LINUX -D UNIX \
    --link-look=full\
    --use-tipue-search\
    --auto-link\
+
+rm -f srcfiles.txt guifiles.txt
