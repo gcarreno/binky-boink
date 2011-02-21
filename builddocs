@@ -7,7 +7,7 @@ DESC="Lib and visualizer for BOINC Client"
 
 echo "$PWD/src/*.pas" > "$PWD/srcfiles.txt"
 
-pasdoc -D FPC -D LINUX -D UNIX \
+pasdoc -D FPC -D LINUX -D UNIX -D FPC_VERSION=2 -D FPC_RELEASE=5 -D FPC_PATCH=0\
    -I "$LIB"\
    -I "."\
    -T "$TITLE"\
@@ -28,7 +28,7 @@ DESC="Visualizer for BOINC stats"
 echo "$PWD/gui/*.lpr" >  "$PWD/guifiles.txt"
 echo "$PWD/gui/*.pas" >> "$PWD/guifiles.txt"
 
-pasdoc -D FPC -D LINUX -D UNIX \
+pasdoc -D FPC -D LINUX -D UNIX -D FPC_VERSION=2 -D FPC_RELEASE=5 -D FPC_PATCH=0\
    -I "$LIB"\
    -I "."\
    -T "$TITLE"\

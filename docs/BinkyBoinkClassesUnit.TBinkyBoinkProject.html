@@ -3,40 +3,48 @@
 <head>
 <meta name="GENERATOR" content="PasDoc 0.12.1">
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<title>Binky Boink: BinkyBoinkRPCUnit: Class TBinkyBoinkGUIRequest</title>
+<title>Binky Boink: BinkyBoinkClassesUnit: Class TBinkyBoinkProject</title>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#FF0000">
-<a name="TBinkyBoinkGUIRequest"></a><h1 class="cio">Class TBinkyBoinkGUIRequest</h1>
+<a name="TBinkyBoinkProject"></a><h1 class="cio">Class TBinkyBoinkProject</h1>
 <table class="sections wide_list">
 <tr>
 <td><a class="section"  href="#%40Description">Description</a></td><td><a class="section"  href="#%40Hierarchy">Hierarchy</a></td><td>Fields</td><td><a class="section"  href="#%40Methods">Methods</a></td><td><a class="section"  href="#%40Properties">Properties</a></td></tr></table>
 <a name="%40Description"></a><h2 class="unit">Unit</h2>
 <p class="unitlink">
-<a   href="BinkyBoinkRPCUnit.html">BinkyBoinkRPCUnit</a></p>
+<a   href="BinkyBoinkClassesUnit.html">BinkyBoinkClassesUnit</a></p>
 <h2 class="declaration">Declaration</h2>
 <p class="declaration">
-<code>type TBinkyBoinkGUIRequest = class(TObject)</code></p>
+<code>type TBinkyBoinkProject = class(TObject)</code></p>
 <h2 class="description">Description</h2>
 <p>
-Object.TBinkyBoinkGUIRequest
+Object.TBinkyBoinkProject
 
-<p>RPC Request Object</p>
+<p>Container for a single project.</p>
 <a name="%40Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
 <ul class="hierarchy"><li class="ancestor">TObject</li>
-<li class="thisitem">TBinkyBoinkGUIRequest</li></ul><h2 class="overview">Overview</h2>
+<li class="thisitem">TBinkyBoinkProject</li></ul><h2 class="overview">Overview</h2>
 <a name="%40Methods"></a><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>constructor <b><a   href="BinkyBoinkRPCUnit.TBinkyBoinkGUIRequest.html#Create">Create</a></b>;</code></td>
+<td class="itemcode"><code>constructor <b><a   href="BinkyBoinkClassesUnit.TBinkyBoinkProject.html#Create">Create</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a   href="BinkyBoinkClassesUnit.TBinkyBoinkProject.html#Destroy">Destroy</a></b>; override;</code></td>
 </tr>
 </table>
 <a name="%40Properties"></a><h3 class="summary">Properties</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
-<td class="itemcode"><code>property <b><a   href="BinkyBoinkRPCUnit.TBinkyBoinkGUIRequest.html#Content">Content</a></b>: String read FContent write FContent;</code></td>
+<td class="itemcode"><code>property <b><a   href="BinkyBoinkClassesUnit.TBinkyBoinkProject.html#Name">Name</a></b>: String read FName write FName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <b><a   href="BinkyBoinkClassesUnit.TBinkyBoinkProject.html#Units">Units</a></b>: <a   href="BinkyBoinkClassesUnit.TBinkyBoinkUnits.html">TBinkyBoinkUnits</a> read FUnits;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -49,15 +57,33 @@ Object.TBinkyBoinkGUIRequest
 <tr><td colspan="2">
 &nbsp;</td></tr>
 </table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Destroy"></a><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
 <h3 class="detail">Properties</h3>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
-<td class="itemcode"><a name="Content"></a><code>property <b>Content</b>: String read FContent write FContent;</code></td>
+<td class="itemcode"><a name="Name"></a><code>property <b>Name</b>: String read FName write FName;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
-Holds the XML <code>content</code> that will be sent to BOINC</p>
+The <code>name</code> of the project</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a   href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><a name="Units"></a><code>property <b>Units</b>: <a   href="BinkyBoinkClassesUnit.TBinkyBoinkUnits.html">TBinkyBoinkUnits</a> read FUnits;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This project <code>units</code></p>
 </td></tr>
 </table>
 <hr noshade size="1"><span class="appinfo"><em>Generated by <a  target="_parent" href="http://pasdoc.sourceforge.net/">PasDoc 0.12.1</a> on 2011-02-21 13:57:53</em>

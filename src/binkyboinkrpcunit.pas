@@ -34,9 +34,13 @@ type
 
     function Get(aContent: String): String;
   published
+    {** Host/IP of the target machine }
     property Host: String read FHost write FHost;
+    {** Port of the target machine; defaulted to 31416 }
     property Port: String read FPort write FPort;
+    {** Request object }
     property Request: TBinkyBoinkGUIRequest read FRequest;
+    {** Result object }
     property Result: TBinkyBoinkGUIResult read FResult;
   end;
 
@@ -52,6 +56,7 @@ type
   public
     constructor Create;
   published
+    {** Holds the XML content that will be sent to BOINC }
     property Content: String read FContent write FContent;
   end;
 
@@ -67,6 +72,7 @@ type
   public
     constructor Create;
   published
+    {** Holds the XML content returned from BOINC }
     property Content: String read FContent write FContent;
   end;
 
@@ -134,7 +140,6 @@ end;
 
   RPC Request helper object constructor
 }
-
 constructor TBinkyBoinkGUIRequest.Create;
 begin
   FContent:= '';
@@ -145,7 +150,6 @@ end;
 
   RPC Result helper object constructor
 }
-
 constructor TBinkyBoinkGUIResult.Create;
 begin
   FContent:= '';

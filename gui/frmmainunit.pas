@@ -34,7 +34,9 @@ var
 implementation
 
 uses
-  BinkyBoinkClassesUnit, BinkyBoinkRPCUnit;
+  BinkyBoinkClassesUnit
+  //, BinkyBoinkRPCUnit
+  ;
 
 procedure Log(aMessage: String);
 begin
