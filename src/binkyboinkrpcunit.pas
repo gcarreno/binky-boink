@@ -79,7 +79,7 @@ type
 implementation
 
 const
-  RPCWrapper = '<boinc_gui_rpc_request>'#13'%s</boinc_gui_rpc_request>'#13#3;
+  RPCWrapper = '<boinc_gui_rpc_request>'#13'%s</boinc_gui_rpc_request>'#13#13;
 
 {**
   Object.TBinkyBoinkRPC.Create
