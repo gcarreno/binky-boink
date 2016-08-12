@@ -1,4 +1,4 @@
-##Berkeley's BOINC GUI-RPC
+#Berkeley's BOINC GUI-RPC
 
 There seems to be very little documentation on this subject, apart from the 'Read the code'.
 
@@ -11,6 +11,8 @@ Here I'm pooling some resources and links in order to have a better idea on how 
  * [wiki - Controlling BOINC remotely](http://boinc.berkeley.edu/wiki/Controlling_BOINC_remotely)
  * [trak - RpcAuth](https://boinc.berkeley.edu/trac/wiki/RpcAuth)
 * List of the C++ functions: [Controlling the core client via RPC](http://www.sar-hessen.org/projekte/boinc/gui_rpc.html)
+* [APIs for add-on software](http://boinc.berkeley.edu/trac/wiki/SoftwareAddon)
+* [BOINC add-on software](http://boinc.berkeley.edu/addons.php)
 
 ##Helpful Projects
 * [GitHub::boinc-indicator(Python)](https://github.com/MestreLion/boinc-indicator)
